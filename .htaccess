@@ -1,0 +1,22 @@
+Options +FollowSymLinks
+ 
+<IfModule mod_rewrite.c>
+
+    RewriteEngine On
+    # Local rewrite base
+    RewriteBase /DomGridApi/
+    # Production rewrite base
+    # RewriteBase /[%YOUR-PRODUCTION-REWRITE-BASE%]]
+
+    RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
+    RewriteRule ^ %1 [L,NE,R=302]
+    RewriteRule ^((?!public/).*)$ public/$1 [L,NC]
+
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+    # If we don't have mod_rewrite installed, all 404's
+    # can be sent to index.php, and everything works as normal.
+
+    ErrorDocument 404 /index.php
+</IfModule>

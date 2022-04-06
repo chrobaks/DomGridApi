@@ -1,0 +1,147 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding-top: 61px;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: scroll !important;
+    background: #4c4c4c;
+}
+body.no-scroll  {
+    height:100%;
+    overflow-y: hidden;
+}
+
+.title-pre-fix {
+    color: #ccc;
+}
+/* -------------- Task Container -------------- */
+.task-container {
+    width: calc(100% - 120px);
+    margin: 0 auto;
+}
+.task-container .task {
+    width: 100%;
+    min-height: 600px;
+    margin-bottom: 30px;
+    order: 1;
+    border: 1px solid #333;
+    border-radius: 0 0.5em 0.5em 0.5em;
+    background-color: #808080;
+}
+.task-container .task-title {
+    width: 100%;
+    height: 10px;
+    background-color: #196fc0;
+    color: #e5e5e5;
+    text-align:center;
+    padding-top: 5px;
+    font-weight: bold;
+    font-size: small;
+    letter-spacing: 0.2em;
+}
+.task-container .content-row {
+    padding: 10px;
+}
+.content-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.content-menu li {
+    float:left;
+    width: 160px;
+    height: 25px;
+    background-color: #333;
+    border: 1px solid #333;
+    border-bottom: 1px solid #333;
+    border-radius: 0.5em 0.5em 0 0;
+    border-bottom: 0;
+    margin-right: 3px;
+    cursor: pointer;
+}
+.content-menu li a {
+    display:inline-block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    line-height: 2.5em;
+    font-size: 11px;
+}
+
+.content-menu li:hover {
+    background-color: #000;
+}
+.content-menu li.active {
+    background-color: #196fc0 !important;
+}
+.content-menu li a > i {
+    margin-right: 10px;
+}
+
+.content-menu-data {
+    display: none;
+}
+.content-menu-data.active {
+    display: block;
+}
+
+/* -------------- Page Menu Left -------------- */
+ul.page-menu {
+    list-style: none;
+    margin-left: 10px;
+    padding: 0;
+}
+ul.page-menu li {
+    padding: 8px 5px;
+    cursor: pointer;
+}
+ul.page-menu li.sub-item {
+    padding-left: 30px;
+}
+ul.page-menu li:hover {
+    background: #e5e5e5;
+}
+ul.page-menu li.active {
+    color: #ff5500;
+}
+/* -------------- Code -------------- */
+code, pre {
+    display: inline-block;
+    background: #4c4c4c;
+    color: #ff66cc;
+    padding: 10px 30px;
+    line-height: 1.7em;
+}
+code.box, pre.box {
+    width: calc(100% -  100px);
+    height: 240px;
+    overflow-y: auto;
+}
+pre.box.box-open {
+     height: 100%;
+ }
+pre {
+    font-size: 10px;
+}
+code.code-html,
+pre.code-html {
+    color: #e5e5e5;
+}
+/* -------------- Anchor -------------- */
+a {
+    cursor: pointer;
+    color: #ff5500;
+}
+a.lang {
+    color: #f5f5f5;
+}
+a.lang.active {
+    color: #000;
+}
